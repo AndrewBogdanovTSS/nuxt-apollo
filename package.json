@@ -4,7 +4,13 @@
   "dependencies": {
     "@nuxtjs/apollo": "^4.0.0-beta.8",
     "graphql-tag": "^2.9.2",
-    "nuxt": "npm:nuxt-edge"
+    "nuxt": "npm:nuxt-edge",
+    "nuxt-class-component": "^1.2.1"
+  },
+  "devDependencies": {
+    "ts-loader": "^4.4.2",
+    "ts-transform-graphql-tag": "^0.1.3",
+    "typescript": "^2.9.2"
   },
   "scripts": {
     "dev": "nuxt",

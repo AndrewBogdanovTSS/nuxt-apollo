@@ -1,29 +1,22 @@
-
 <template>
-    <div>
-        <h3>Cars</h3>
-        <ul>
-            <li v-for="car in allCars" :key="car.id">
-                <nuxt-link :to="`car/${car.id}`">
-                    {{ car.year }} {{ car.make }} {{ car.model }}
-                </nuxt-link>
-            </li>
-        </ul>
+    <div class="">
+        <cars></cars>
     </div>
 </template>
 
-<script>
-  import allCars from '~/apollo/queries/allCars'
-  export default {
-    apollo: {
-      allCars: {
-        prefetch: true,
-        query: allCars
-      }
-    },
-    head: {
+<script lang="ts">
+  import Vue from 'vue'
+  import Component from 'nuxt-class-component'
+  import Cars from '@/components/Cars'
+
+  @Component({
+    components: { Cars },
+    head : {
       title: 'Cars with Apollo'
     }
+  })
+  export default class extends Vue {
+
   }
 </script>
 
@@ -34,10 +27,12 @@
         padding: 0;
         line-height: 1.6;
     }
+
     a {
         text-decoration: none;
         color: #3498DB;
     }
+
     a:hover {
         border-bottom: 1px solid;
     }
