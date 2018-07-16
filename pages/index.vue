@@ -1,39 +1,19 @@
 <template>
-    <div class="">
-        <cars></cars>
-    </div>
+    <Inspirations />
 </template>
 
 <script lang="ts">
   import Vue from 'vue'
   import Component from 'nuxt-class-component'
-  import Cars from '@/components/Cars'
+  import Inspirations from '@/components/Inspirations'
 
   @Component({
-    components: { Cars },
+    components: { Inspirations },
     head : {
-      title: 'Cars with Apollo'
+      title: 'This title is overwritten by the one from Inspirations component'
     }
-  })
+  } as any)
   export default class extends Vue {
 
   }
 </script>
-
-<style>
-    ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        line-height: 1.6;
-    }
-
-    a {
-        text-decoration: none;
-        color: #3498DB;
-    }
-
-    a:hover {
-        border-bottom: 1px solid;
-    }
-</style>
