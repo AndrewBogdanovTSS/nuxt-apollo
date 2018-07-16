@@ -1,0 +1,15 @@
+{
+  "name": "example-vue-apollo",
+  "license": "MIT",
+  "dependencies": {
+    "@nuxtjs/apollo": "^4.0.0-beta.8",
+    "graphql-tag": "^2.9.2",
+    "nuxt": "npm:nuxt-edge"
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  }
+}
