@@ -1,0 +1,9 @@
+query GetAllInspiration($first: Int) {
+    allInspirations(first: $first) {
+      id
+      slug
+      name
+      header_image_url
+      header_image_small_url
+    }
+  }

@@ -1,11 +1,11 @@
 
 <template>
     <div>
-        <h3>Cars</h3>
+        <h3>Inspirations</h3>
         <ul>
-            <li v-for="car in allCars" :key="car.id">
-                <nuxt-link :to="`car/${car.id}`">
-                    {{ car.year }} {{ car.make }} {{ car.model }}
+            <li v-for="inspiration in allInspirations" :key="inspiration.id">
+                <nuxt-link :to="`inspiration/${inspiration.slug}`">
+                    <img :src="inspiration.header_image_small_url" width="100"/>{{ inspiration.name }}
                 </nuxt-link>
             </li>
         </ul>
@@ -13,16 +13,19 @@
 </template>
 
 <script>
-  import allCars from '~/apollo/queries/allCars'
+  import query from '~/apollo/queries/getAllInspirations'
   export default {
     apollo: {
-      allCars: {
+      allInspirations: {
         prefetch: true,
-        query: allCars
+        query
       }
     },
     head: {
-      title: 'Cars with Apollo'
+      title: 'Inspirations with Apollo and testing some stuff'
+    },
+    created() {
+        console.log('this.allInspirations', this.allInspirations);
     }
   }
 </script>

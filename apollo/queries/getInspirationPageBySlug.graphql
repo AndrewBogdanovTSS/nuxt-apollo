@@ -1,0 +1,40 @@
+query GetInspirationPageBySlug($slug: String!) {
+  getInspirationPageBySlug(slug: $slug) {
+    id
+    slug
+    name
+    header_title
+    introduction_title
+    introduction_text
+    first_image_block_introduction_title
+    first_image_block_introduction_text
+    first_image_block_background_color
+    first_image_block_font_color
+    first_product_slider_ids
+    second_image_block_introduction_title
+    second_image_block_introduction_text
+    second_image_block_background_color
+    second_image_block_font_color
+    second_product_slider_ids
+    image_separator_title
+    image_separator_text
+    third_product_slider_ids
+    first_image_block_image_left_url
+    first_image_block_image_right_url
+    second_image_block_image_left_url
+    second_image_block_image_right_url
+    image_separator_image_url
+    header_image_url
+    header_image_small_url
+    items {
+      id
+      title
+      description
+      url
+      icon_url
+      inspiration {
+        id
+      }
+    }
+  }
+}
